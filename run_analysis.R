@@ -59,7 +59,7 @@ X.comb <- select(X.comb, subject, label,
                  contains("mean()"), contains("std()"))
 
 
-## CREATE NEW TIDY DATASET WITH JUST MEANS, FOR EACH VARIABLE AND EACH SUBJECT
+## CREATE NEW TIDY DATASET WITH JUST MEANS, FOR EACH VARIABLE/SUBJECT COMBINATION
 
 # Convert to tibble to use group_by function
 X.comb <- tibble::as_tibble(X.comb)
@@ -68,5 +68,8 @@ X.comb <- tibble::as_tibble(X.comb)
 by.sub.lab <- group_by(X.comb, subject, label)
 #summarize(by.sub.lab)
 
-# calculate mean of all variables for each group
-means.sub.lab <- summarize_all(by.sub.lab, list(name = mean))
+# Calculate mean of all variables for each group and write table
+means.sub.lab <- summarize_all(by.sub.lab, list(mean))
+
+# Save tidy data set as text file
+write.table(means.sub.lab, "tidy_table_output.txt", row.name = FALSE)

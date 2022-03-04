@@ -1,0 +1,34 @@
+
+subject
+Numerical code for each subject in the study. 
+Can have integer value between 1 and 30.
+
+label
+Descriptive label for each activity that was measured.
+Possible values: WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING
+
+For each subject/label combination, values of the following variables are reported:
+
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+For more information on how the signals were processed, please see ./UCI HAR Dataset/features_info.txt
+
+For each signal, the following variables were estimated:
+mean(): Mean value
+std(): Standard deviation
