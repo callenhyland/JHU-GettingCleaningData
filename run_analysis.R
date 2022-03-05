@@ -1,7 +1,11 @@
 # JHU Getting and Cleaning Data Course Project
 # Created by Callen Hyland, March 2, 2022
 
-# This project analyzes data collected from accelerometers in Samsung Galaxy smartphones while test subject were performing a variety of activities. Script below does the following:
+# This project analyzes data collected from accelerometers 
+# in Samsung Galaxy smartphones while test subjects were performing 
+# a variety of activities. 
+
+# Script below does the following:
 
 # 1. Merges the training and the test sets to create one data set.
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement.
