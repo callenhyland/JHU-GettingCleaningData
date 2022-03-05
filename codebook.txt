@@ -1,34 +1,84 @@
+Data Code Book
+March 4, 2022
 
-subject
-Numerical code for each subject in the study. 
-Can have integer value between 1 and 30.
+Summary of accelerometer data by subject and activity
+See file: "tidy_table_output.txt"
 
-label
-Descriptive label for each activity that was measured.
-Possible values: WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING
+Each row reports the mean of one subjects measurements while doing a single activity. For example, the row with subject = 1 and label = WALKING contains the mean values of each variable for all recordings made of subject 1 while walking.
 
-For each subject/label combination, values of the following variables are reported:
-
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
 
 For more information on how the signals were processed, please see ./UCI HAR Dataset/features_info.txt
 
-For each signal, the following variables were estimated:
+
+Variables reported for each subject doing each activity:
+
+subject
+	Numerical code for each subject in the study. 
+	Can have integer value between 1 and 30.
+
+label
+	Descriptive label for each activity that subjects did while being recorded
+	Values: WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING
+
+
+For each recording, the following calculated values were used for each variable:
 mean(): Mean value
 std(): Standard deviation
+"t" before variable name indicates time domain data and "f" before variable name indicates frequency domain data.
+All variables are normalized to take a value between -1 and 1.
+
+
+tBodyAcc-XYZ, mean() and std()
+	Directional body acceleration (g), separate columns for acceleration in X, Y and Z directions. Obtained by subtracting the gravitational acceleration from the total acceleration.
+
+tGravityAcc-XYZ, mean() and std()
+	Gravitational acceleration (g), separate columns for acceleration in X, Y and Z directions.
+
+tBodyAccJerk-XYZ, mean() and std()
+	Body acceleration jerk (g/sec) vector, separate columns for jerk in X, Y and Z directions.
+
+tBodyGyro-XYZ, mean() and std()
+	Angular body velocity vector measured by the gyroscope (radians/sec), separate columns for acceleration in X, Y and Z directions.
+
+
+tBodyGyroJerk-XYZ, mean() and std()
+	Body angular jerk vector measured by the gyroscope (radians/sec^2). separate columns for jerk in X, Y and Z directions.
+
+tBodyAccMag, mean() and std()
+	Body acceleration magnitude (g).
+
+tGravityAccMag, mean() and std()
+	Gravitational acceleration magnitude (g).
+
+
+tBodyAccJerkMag, mean() and std()
+	Body acceleration jerk magnitude (g/sec).
+
+
+tBodyGyroMag, mean() and std()
+	Magnitude of angular body acceleration vector (radians/sec).
+
+tBodyGyroJerkMag, mean() and std()
+	Body angular jerk magnitude (radians/sec^2).
+
+
+fBodyAcc-XYZ, mean() and std()
+	Fourier transform of body acceleration time series (g), separate columns for X, Y, and Z directions.
+
+fBodyAccJerk-XYZ, mean() and std()
+	Fourier transform of body acceleration jerk time series (g/sec), separate columns for X, Y, and Z directions.
+
+fBodyGyro-XYZ, mean() and std()
+	Fourier transform of body angular jerk vector measured by the gyroscope (radians/sec^2). separate columns for jerk in X, Y and Z directions.
+
+fBodyAccMag, mean() and std()
+	Fourier transform of body acceleration magnitude (g).
+
+fBodyAccJerkMag, mean() and std()
+	Fourier transform of body acceleration jerk magnitude (g/sec).
+
+fBodyGyroMag, mean() and std()
+	Fourier transform of the magnitude of angular body acceleration vector (radians/sec).
+
+fBodyGyroJerkMag, mean() and std()
+	Fourier transform of body angular jerk magnitude (radians/sec^2).
